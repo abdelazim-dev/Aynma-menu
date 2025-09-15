@@ -1,3 +1,5 @@
+
+
 const drinks = [
     {
         name: "اسبريسو",
@@ -149,7 +151,11 @@ const desserts = [
         textColor: "#000000"
     }
 ];
-
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/service-worker.js")
+        .then(() => console.log("✅ Service Worker registered"))
+        .catch(err => console.log("❌ SW registration failed:", err));
+}
 const swiperWrapper = document.querySelector('.product-swiper .swiper-wrapper');
 const productName = document.getElementById('product-name');
 const productPrice = document.getElementById('product-price');

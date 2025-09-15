@@ -30,6 +30,7 @@ body {
     font-weight: 600;
     font-family: 'Cinzel', serif;
     letter-spacing: 3px;
+
 }
 
 .alpha {
@@ -190,7 +191,7 @@ body {
     border-radius: 20px;
     padding: 20px;
     width: 80%;
-    height: 190px;
+    height: 170px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     z-index: 1;
     text-align: center;
@@ -198,7 +199,7 @@ body {
 
 .price-card h2 {
     font-size: 32px;
-    margin-top: 30px;
+    margin-top: 10px;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -260,7 +261,17 @@ body {
 
 
 @media (min-width: 768px) {
+
+
+    .alpha {
+        margin-top: 20px;
+        color: #555;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
     .title-card {
+
         position: relative;
         display: inline-block;
         margin: 0;
@@ -448,7 +459,7 @@ body {
     .price-card h2 {
         font-size: 52px;
         font-weight: 600;
-        margin-top: 90px;
+        margin-top: 50px;
         margin-bottom: 10px;
     }
 
@@ -500,14 +511,4 @@ body {
 
 
 
-}
-
-
-@media (min-width: 768px) {
-    .product-section {
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%) scale(0.7);
-        max-width: 600px;
-    }
 }

@@ -1,0 +1,20 @@
+{
+    "name": "AYNMA",
+    "short_name": "ATNMA",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#7c4dff",
+    "icons": [
+        {
+            "src": "images/alpha.jpeg",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/alpha.jpeg",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
