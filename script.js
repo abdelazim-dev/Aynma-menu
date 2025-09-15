@@ -198,32 +198,43 @@ function updateProduct(index) {
     const product = currentProducts[index];
     productName.textContent = product.name;
     productPrice.textContent = `${product.price} ﷼`;
-    // priceCard.style.background = product.bgColor;
-    // priceCard.style.color = product.textColor;
 
     body.style.background = `
-    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.08), transparent 40%),
-    radial-gradient(circle at 75% 20%, rgba(255, 255, 255, 0.05), transparent 50%),
-    radial-gradient(circle at 50% 80%, rgba(0, 0, 0, 0.3), transparent 60%),
-    ${product.bgColor},
-    linear-gradient(180deg, #111, #000)
-`;
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.08), transparent 40%),
+        radial-gradient(circle at 75% 20%, rgba(255, 255, 255, 0.05), transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(0, 0, 0, 0.3), transparent 60%),
+        ${product.bgColor},
+        linear-gradient(180deg, #111, #000)
+    `;
 
     const slides = document.querySelectorAll('.swiper-slide');
     slides.forEach((slide, i) => {
         slide.style.transform = "scale(0.7)";
 
         if (i === index) {
+            let scaleValue = 1.05; // الافتراضي
+
+            // لو حلويات
             if (currentProducts === desserts) {
-                slide.style.transform = "scale(1.9)";
-            } else if (currentProducts === drinks && index === 0) {
-                slide.style.transform = "scale(1.9)";
-            } else {
-                slide.style.transform = "scale(1.05)";
+                scaleValue = 1.9;
             }
+            // لو أول مشروب
+            else if (currentProducts === drinks && index === 0) {
+                scaleValue = 1.9;
+            }
+
+            // 👇 هنا نكبر أكتر على التابلت والشاشات الكبيرة
+            if (window.innerWidth >= 400 && window.innerWidth < 900) {
+                scaleValue *= 1.6; // التابلت
+            } else if (window.innerWidth >= 900) {
+                scaleValue *= 1.8; // لابتوب أو أكبر
+            }
+
+            slide.style.transform = `scale(${scaleValue})`;
         }
     });
 }
+
 
 
 tabs.forEach((tab, i) => {
