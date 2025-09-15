@@ -1,6 +1,6 @@
 {
     "name": "AYNMA",
-    "short_name": "ATNMA",
+    "short_name": "AYNMA",
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#ffffff",
