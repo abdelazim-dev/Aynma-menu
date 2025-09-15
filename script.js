@@ -213,7 +213,7 @@ function updateProduct(index) {
             } else if (currentProducts === drinks && index === 0) {
                 slide.style.transform = "scale(1.9)";
             } else {
-                slide.style.transform = "scale(1.1)";
+                slide.style.transform = "scale(1.05)";
             }
         }
     });
