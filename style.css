@@ -23,6 +23,7 @@ body {
 
 .title-card {
     text-align: center;
+    left: -50%;
 }
 
 .title-card h1 {
