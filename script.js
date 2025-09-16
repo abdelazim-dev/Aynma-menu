@@ -212,22 +212,22 @@ function updateProduct(index) {
         slide.style.transform = "scale(0.7)";
 
         if (i === index) {
-            let scaleValue = 1.05; // الافتراضي
+            let scaleValue = .95;
 
-            // لو حلويات
+
             if (currentProducts === desserts) {
-                scaleValue = 1.9;
-            }
-            // لو أول مشروب
-            else if (currentProducts === drinks && index === 0) {
-                scaleValue = 1.9;
+                scaleValue = 1.7;
             }
 
-            // 👇 هنا نكبر أكتر على التابلت والشاشات الكبيرة
-            if (window.innerWidth >= 400 && window.innerWidth < 900) {
-                scaleValue *= 1.6; // التابلت
+            else if (currentProducts === drinks && index === 0) {
+                scaleValue = 1.7;
+            }
+
+
+            if (window.innerWidth >= 500 && window.innerWidth < 900) {
+                scaleValue *= 1.5;
             } else if (window.innerWidth >= 900) {
-                scaleValue *= 1.8; // لابتوب أو أكبر
+                scaleValue *= 1.5;
             }
 
             slide.style.transform = `scale(${scaleValue})`;

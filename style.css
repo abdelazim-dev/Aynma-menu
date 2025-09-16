@@ -55,6 +55,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 9999;
     gap: 16px;
     margin: 16px 0;
 }
@@ -82,6 +84,8 @@ body {
     background: none;
     transform: scale(0.75);
     padding: 0;
+    position: relative;
+    z-index: 9999;
 }
 
 .tab {
@@ -155,6 +159,7 @@ body {
     position: relative;
     display: flex;
     height: 350px;
+    padding-top: 25px;
     transform: scale(1);
     justify-content: center;
     perspective: 1400px;
@@ -163,6 +168,7 @@ body {
 
 .product-img img {
     width: 260px;
+
     animation: float 6s ease-in-out infinite;
     transform-style: preserve-3d;
     transition: transform 0.5s ease;
@@ -259,17 +265,17 @@ body {
 
 }
 
-/* تكبير المنتج في التابلت Portrait */
-@media (min-width: 400px) {
+@media (min-width: 500px) and (max-width: 900px) {
 
-    /* الأزرار */
     .tabs {
         display: flex;
         justify-content: center;
         margin-top: 16px;
         background: none;
         padding: 0;
-        transform: scale(1.1);
+        transform: scale(.89);
+        position: relative;
+        z-index: 9999;
     }
 
     .tab {
@@ -297,7 +303,7 @@ body {
         background: linear-gradient(135deg, #42a5f5, #5c6bc0);
         color: #fff;
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-        transform: scale(1.05);
+        transform: scale(1);
         z-index: 1;
     }
 
@@ -316,7 +322,6 @@ body {
         padding: 34px;
     }
 
-    /* الصورة */
     .product-img {
         position: relative;
         display: flex;

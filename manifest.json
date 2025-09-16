@@ -1,4 +1,5 @@
 {
+    "orientation": "portrait",
     "name": "AYNMA",
     "short_name": "AYNMA",
     "start_url": "./index.html",
